@@ -5,7 +5,7 @@ import Values from "values.js";
 
 function App() {
   //set user's input
-  const [color, setColor] = useState(0);
+  const [color, setColor] = useState("#f515025");
   //set if this color exist or error
   const [error, setError] = useState(false);
   //set lists of library colors
@@ -46,7 +46,7 @@ function App() {
       <section className="colors">
         {/* <p>{color} hi</p> */}
         {list.map((item, index) => {
-          return <SingleColor key={index} index={index} {...color} />;
+          return <SingleColor key={index} index={index} {...item} />;
         })}
       </section>
     </>
